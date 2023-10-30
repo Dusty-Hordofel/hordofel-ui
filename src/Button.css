@@ -1,0 +1,7 @@
+.button-position {
+  left: 20%;
+  position: fixed;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}

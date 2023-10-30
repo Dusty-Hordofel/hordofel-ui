@@ -1,4 +1,5 @@
 import React from 'react'
+import './Button.css'
 
 type ButtonProps = {
     text: string
@@ -8,9 +9,9 @@ type ButtonProps = {
 
 export const Button = ({ text, className }: ButtonProps) => {
     return (
-        <>
+        <div className='button-position'>
             <p className={className}>Hello {text} !</p>
-        </>
+        </div>
     )
 }
 
