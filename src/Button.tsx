@@ -17,7 +17,7 @@ export const Button = ({ children, showModal }: IButton) => {
     return (
         <>
             {showModal && (
-                <div style={modalStyle} className='modal'>
+                <div style={modalStyle} className='modal relative'>
                     <div className='modal-content'>
                         {children}
                     </div>
