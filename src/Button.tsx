@@ -1,15 +1,10 @@
-import React, { ReactElement, SVGAttributes } from 'react'
+import React from 'react'
 
 type IButton = {
     text: string
     className?: string
     children?: React.ReactNode
-    // icon?: ReactElement<SVGAttributes<SVGElement>>
-    // closeModal: () => void
     showModal: boolean
-    // closeModal: () => void
-    // showModal: () => void
-
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const modalStyle = {
@@ -28,7 +23,6 @@ export const Button = ({ text, className, children, showModal }: IButton) => {
                     <div className='modal-content'>
                         <p className={className}>Hello {text} !</p>
                         {children}
-                        {/* <span onClick={closeModal}>{icon}</span> */}
                     </div>
                 </div>
             )}
