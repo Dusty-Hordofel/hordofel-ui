@@ -1,8 +1,6 @@
 import React from 'react'
 
 type IButton = {
-    text: string
-    className?: string
     children?: React.ReactNode
     showModal: boolean
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -15,13 +13,12 @@ const modalStyle = {
     zIndex: 1,
 };
 
-export const Button = ({ text, className, children, showModal }: IButton) => {
+export const Button = ({ children, showModal }: IButton) => {
     return (
         <>
             {showModal && (
                 <div style={modalStyle} className='modal'>
                     <div className='modal-content'>
-                        <p className={className}>Hello {text} !</p>
                         {children}
                     </div>
                 </div>
