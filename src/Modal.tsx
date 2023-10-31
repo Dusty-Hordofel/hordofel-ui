@@ -1,9 +1,9 @@
 import React from 'react'
 
-type IButton = {
-    children?: React.ReactNode
+interface IModal {
+    children: React.ReactNode
     showModal: boolean
-} & React.ButtonHTMLAttributes<HTMLButtonElement>
+}
 
 const modalStyle = {
     left: "50%",
@@ -13,7 +13,7 @@ const modalStyle = {
     zIndex: 1,
 };
 
-export const Button = ({ children, showModal }: IButton) => {
+export const Modal = ({ children, showModal }: IModal) => {
     return (
         <>
             {showModal && (
