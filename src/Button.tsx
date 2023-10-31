@@ -5,7 +5,7 @@ type IButton = {
     className?: string
     children?: React.ReactNode
     // icon?: ReactElement<SVGAttributes<SVGElement>>
-    closeModal: () => void
+    // closeModal: () => void
     showModal: boolean
     // closeModal: () => void
     // showModal: () => void
@@ -20,7 +20,7 @@ const modalStyle = {
     zIndex: 1,
 };
 
-export const Button = ({ text, className, children, icon, closeModal, showModal }: IButton) => {
+export const Button = ({ text, className, children, showModal }: IButton) => {
     return (
         <>
             {showModal && (
