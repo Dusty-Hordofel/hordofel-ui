@@ -27,14 +27,15 @@ const [displayModal, setDisplayModal] = useState(false);
 3. In the return :
 
 ```js
-<Modal
-  key={modalReset}
-  id="modal-created"
-  showModal={displayModal}
-  closeModal={() => setDisplayModal(false)}
-  style={modalStyle}
-  message="Employee Created !"
-/>
+<Modal showModal={displayModal}>
+  <p className="text-lg text-white">Employee Created !</p>
+  <span
+    className="absolute block text-xs text-white cursor-pointer right-3 top-3 icon"
+    onClick={() => setDisplayModal(false)}
+  >
+    Close
+  </span>
+</Modal>
 ```
 
 Modal is a react component that receives a child, so you can put whatever you want in it and customise it as you like. In our example, we put a paragraph and a span as children.
